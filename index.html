@@ -1,0 +1,69 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="imagens/logo.png" width="900" height="1000" />
+    <title>Starbucks Landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+    
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+        
+        
+            <a href="#"><img src="imagens/logo.png" class="logo"></a>
+        
+            <nav class="navbar">
+                <a href="#">Inicio</a>
+                <a href="#">Menu</a>
+                <a href="#">Contatos</a>
+            </nav>
+        </header>
+            
+            
+        <div class="content">
+            <div class="textBox">
+                <h2>Não é apenas um café <br>É <span>Starbucks</span></h2>
+                <p>O café não é apenas uma bebida energética, é um ritual que nos conecta. É a pausa no meio do caos, o pretexto para encontros e a desculpa para uma conversa profunda. É o aroma que envolve nossos sentidos e nos acalma, preparando-nos para enfrentar o dia.</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+            <div class="imgBox">
+                <img src="imagens/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><a href="#"><img src="imagens/thumb1.png" onclick="imgSlider('imagens/img1.png'); changeCor('#017143') " ></a></li>
+            <li><a href="#"><img src="imagens/thumb2.png" onclick="imgSlider('imagens/img2.png'); changeCor('#eb7495') " ></a></li>
+            <li><a href="#"><img src="imagens/thumb3.png" onclick="imgSlider('imagens/img3.png'); changeCor('#d752b1')" ></a></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="imagens/facebook.png"></a></li>
+            <li><a href="#"><img src="imagens/twitter.png"></a></li>
+            <li><a href="#"><img src="imagens/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCor(color){
+            const circle = document.querySelector('.circle');
+            const span = document.querySelector('.textBox h2 span');
+            const button =document.querySelector('.textBox a');
+            circle.style.background = color;
+            button.style.background = color;
+            span.style.color = color;
+        }
+       
+
+    </script>
+</body>
+</html>
